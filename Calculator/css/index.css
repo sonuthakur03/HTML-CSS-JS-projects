@@ -1,0 +1,157 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #2196f3 0%, #e91e63 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.bubbles{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+}
+
+.bubbles span{
+    height: 60px;
+    width: 60px;
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    backdrop-filter : blur(5px);
+    animation: move 10s linear infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes move{
+    100%{
+        transform: translateY(-90vh);
+    }
+}
+
+.bubbles span.one{
+    animation-delay: 2s;
+    transform: scale(2);
+}
+.bubbles span.two{
+    animation-delay: 3.4s;
+    transform: scale(0.2);
+}
+.bubbles span.three{
+    animation-delay: 1.2s;
+    transform: scale(2.5);
+}
+.bubbles span.four{
+    animation-delay: 7s;
+    transform: scale(1.7);
+}
+.bubbles span.five{
+    animation-delay: 5s;
+    transform: scale(0.7);
+}
+.bubbles span.six{
+    animation-delay: 6.2s;
+    transform: scale(1.9);
+}
+.bubbles span.seven{
+    animation-delay: 4s;
+    transform: scale(2.7);
+}
+
+.bubbles span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 40%;
+    background: rgba(255,255,255,0.45);
+    animation: mirror 3s linear infinite;
+}
+
+@keyframes mirror {
+   0%{
+       transform: translateX(-50px) skew(45deg);
+   }
+   
+    100%{
+        transform: translateX(150px) skew(45deg);
+    }
+}
+
+.bubbles span.one::before{
+    animation-delay: 2s;
+}
+.bubbles span.two::before{
+    animation-delay: 3.4s;
+}
+.bubbles span.three::before{
+    animation-delay: 1.2s;
+}
+.bubbles span.four::before{
+    animation-delay: 7s;
+}
+.bubbles span.five::before{
+    animation-delay: 5s;
+}
+.bubbles span.six::before{
+    animation-delay: 6.2s;
+}
+.bubbles span.seven::before{
+    animation-delay: 4s;
+}
+
+.container{
+    width: 360px;
+    background: rgba(255,255,255,0.3);
+    z-index: 999;
+    padding: 15px;
+    backdrop-filter : blur(5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    border-radius: 12px;
+}
+
+.container input[type="text"]{
+    width: 100%;
+    height: 100px;
+    margin: 0 3px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.container input[type="button"]{
+    height: 65px;
+    color: #fff;
+    width: calc(100% / 4 - 5px);
+    background: transparent;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container input[type="button"]:hover{
+    background: rgba(255,255,255,0.3);
+}

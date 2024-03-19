@@ -1,0 +1,74 @@
+* {
+    margin: 0; /* Sets margin to 0 for all elements */
+    padding: 0; /* Sets padding to 0 for all elements */
+    box-sizing: border-box; /* Ensures that padding and border are included in the element's total width and height */
+}
+
+body {
+    background-color: #d8cece; /* Sets the background color of the entire webpage */
+}
+
+.card {
+    width: 320px; /* Sets the width of the card container */
+    background-color: #fff; /* Sets the background color of the card */
+    border: 1px solid rgb(179,168,168); /* Sets border properties for the card */
+    border-radius: 15px; /* Adds rounded corners to the card */
+    margin: 60px auto; /* Centers the card horizontally on the page with a top margin of 60px */
+}
+
+.card #images {
+    display: flex; /* Sets the display property to flex for the images container */
+    justify-content: center; /* Centers the child elements horizontally within the container */
+    align-items: center; /* Centers the child elements vertically within the container */
+    margin: 20px 0; /* Sets margin properties for the images container */
+}
+
+.card img {
+    height: 200px; /* Sets the height of the images */
+    border-radius: 50%; /* Rounds the corners of the images to create circular shape */
+}
+
+.btn1 {
+    display: flex; /* Sets the display property to flex for the buttons container */
+    gap: 20px; /* Sets the gap between the child elements */
+    margin: 20px; /* Sets margin properties for the buttons container */
+    justify-content: center; /* Centers the child elements horizontally within the container */
+}
+
+.btn {
+    border-radius: 10px; /* Adds rounded corners to the buttons */
+    margin-bottom: 10px; /* Sets bottom margin for the buttons */
+    margin-left: 15px; /* Sets left margin for the buttons */
+    padding: 2px 7px; /* Sets padding for the buttons */
+    border: 0.5px solid #d8cece; /* Sets border properties for the buttons */
+    background-color: #fff; /* Sets the background color of the buttons */
+    color: grey; /* Sets the text color of the buttons */
+}
+
+.heading h2 {
+    padding: 20px 0; /* Sets padding properties for the heading h2 element */
+}
+
+.heading {
+    margin: 0px 15px; /* Sets margin properties for the heading container */
+    font-family: 'Montserrat', sans-serif; /* Sets the font family for the heading */
+}
+
+.heading p {
+    line-height: 30px; /* Sets the line height for the paragraphs within the heading */
+    color: grey; /* Sets the text color for the paragraphs within the heading */
+}
+
+.btn2 a {
+    background-color: #d8cece; /* Sets the background color of the anchor element */
+    color: violetblue; /* Sets the text color of the anchor element */
+    text-decoration: none; /* Removes underline from the anchor element */
+    display: block; /* Displays the anchor element as a block-level element */
+    width: 100px; /* Sets the width of the anchor element */
+    margin: 15px auto; /* Centers the anchor element horizontally with top and bottom margin */
+    padding: 10px; /* Sets padding for the anchor element */
+    border-radius: 20px; /* Adds rounded corners to the anchor element */
+    text-align: center; /* Centers the text within the anchor element */
+    font-weight: 600; /* Sets the font weight for the text within the anchor element */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the anchor element */
+}

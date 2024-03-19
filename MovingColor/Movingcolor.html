@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #212121;
+  height: 100vh;
+  color: white;
+}
+
+#box{
+  width: 400px;
+  height: 200px;
+  border: 1px solid #cccc;
+}
+
+  </style>
+  <title>MovingColor</title>
+</head>
+<body>
+	<h1>MovingColor</h1>
+	<div id="box"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+	  const box = document.querySelector('#box');
+console.log(box);
+
+function loca(e){
+let rect = box.getBoundingClientRect();
+let mouselocation = e.clientX - rect.left;
+
+if(mouselocation < rect.width/2){
+ let red = gsap.utils.mapRange(0,rect.width/2,255,0, mouselocation);
+  red = Math.floor(red);
+  gsap.to(box, {
+    backgroundColor : `rgb(${red},0,0)`,
+    ease : Power4,
+  })
+} else {
+  let blue = gsap.utils.mapRange(rect.width/2,rect.width,0,255, mouselocation);
+  blue = Math.floor(blue);
+  gsap.to(box, {
+    backgroundColor : `rgb(0,0,${blue})`,
+    ease : Power4,
+  })
+}
+}
+box.addEventListener('mousemove', loca)
+// gsap.utils.mapRange(inMin,inMax,outMin,outMax, valueToMap);
+// gsap.to(targetedElement,{
+//   key : value; of css,
+//   key : value; of css,
+// })
+	</script>
+</body>
+</html>
