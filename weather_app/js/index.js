@@ -7,7 +7,6 @@ wIcon = wrapper.querySelector('.weather-part img');
 arrowBack = wrapper.querySelector('header i');
 
 
-let apikey = '554adc7426f9356b1177c054603c1db0'
 let api;
 
 
